@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Оқу материалдары - The Biological Lens</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#bfcaba",
+                    "on-tertiary-fixed": "#3f001c",
+                    "on-tertiary-fixed-variant": "#7f2448",
+                    "primary-container": "#2e7d32",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#4c6a48",
+                    "secondary": "#476644",
+                    "on-secondary-fixed": "#052106",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary-fixed-dim": "#ffb1c7",
+                    "on-primary-container": "#cbffc2",
+                    "on-tertiary-container": "#ffedf0",
+                    "surface-dim": "#dadada",
+                    "tertiary-fixed": "#ffd9e2",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "outline": "#707a6c",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#1b6d24",
+                    "on-primary-fixed-variant": "#005312",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#304e2e",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#88d982",
+                    "secondary-container": "#c6e9be",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-fixed": "#c9ecc1",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#88d982",
+                    "primary-fixed": "#a3f69c",
+                    "on-background": "#1a1c1c",
+                    "background": "#f9f9f9",
+                    "primary": "#0d631b",
+                    "secondary-fixed-dim": "#add0a6",
+                    "on-surface-variant": "#40493d",
+                    "tertiary": "#923357",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed": "#002204",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-container": "#b14b6f",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(24px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen">
+<!-- Navigation Drawer (Desktop) -->
+<aside class="hidden md:flex flex-col w-72 h-screen fixed left-0 top-0 pt-20 bg-zinc-50 dark:bg-zinc-950 border-r border-zinc-100 dark:border-zinc-800 z-40">
+<div class="px-6 mb-8">
+<h2 class="font-manrope uppercase tracking-widest text-xs font-semibold text-emerald-700">Биология 10-11</h2>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-4 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-100 font-bold rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="font-label">Кітапхана</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-zinc-600 dark:text-zinc-400 hover:pl-8 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label">Тапсырмалар</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-zinc-600 dark:text-zinc-400 hover:pl-8 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label">Прогресс</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-zinc-600 dark:text-zinc-400 hover:pl-8 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label">Параметрлер</span>
+</a>
+</nav>
+</aside>
+<!-- Top AppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex items-center justify-between px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-800 text-3xl" data-icon="microscope">magnification_small</span>
+<h1 class="text-2xl font-black tracking-tighter text-emerald-800 dark:text-emerald-400 font-headline">The Biological Lens</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-xl font-bold text-sm hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="upload_file">upload_file</span>
+                    PDF жүктеу
+                </button>
+<div class="h-8 w-px bg-zinc-200"></div>
+<a class="text-emerald-700 font-medium border-b-2 border-emerald-700 pb-1" href="#">Оқулықтар</a>
+<a class="text-zinc-500 hover:text-emerald-600 transition-all" href="#">Зертхана</a>
+</div>
+<div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCzYYzeXNgojTJl9BkRfCoMxpvOjeBJriu9h0qbiXFhOdriX6G-2rn_dZMIQGkULxHI0ardi2GyQvx0dHBgGOjEPs0vqia3B6HDeewgg3Yavfr71cewpfgjn44QRN4SFk3vI59DgH_b-uLv9JiBd87frMQy02cQ_bQhmE0aSnUgJ1KInvSy5itWkgHNnxEaNh3Th4uHHbIC-e7pMafwAAZvSdCy6b369PtAMl7Wz4Kqs4SVmFnQIFBNauyXrbiaGuOHEcPBqng7fg"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="md:ml-72 min-h-screen pt-8 pb-20 px-4 md:px-12 max-w-7xl">
+<!-- Header & Search -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-4xl md:text-5xl font-black tracking-tight text-on-surface mb-2 font-headline">Оқу материалдары</h2>
+<p class="text-zinc-500 font-body max-w-xl">Биология әлеміне терең бойлаңыз. 10-11 сынып бағдарламасына сәйкес интерактивті материалдар мен зерттеулер жинағы.</p>
+</div>
+<div class="relative w-full md:w-96 group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-on-surface font-body placeholder:text-zinc-400 transition-all" placeholder="Тақырыпты іздеу..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section class="mb-16">
+<div class="flex items-center gap-4 overflow-x-auto pb-4 no-scrollbar">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-label text-sm font-semibold whitespace-nowrap shadow-md">Барлығы</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container hover:bg-emerald-200 transition-colors rounded-full font-label text-sm font-semibold whitespace-nowrap">Молекулалық биология</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container hover:bg-emerald-200 transition-colors rounded-full font-label text-sm font-semibold whitespace-nowrap">Генетика</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container hover:bg-emerald-200 transition-colors rounded-full font-label text-sm font-semibold whitespace-nowrap">Экология</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container hover:bg-emerald-200 transition-colors rounded-full font-label text-sm font-semibold whitespace-nowrap">Эволюция</button>
+</div>
+</section>
+<!-- Course Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Featured Card -->
+<article class="lg:col-span-8 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-zinc-50">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
+<img alt="DNA" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-K667Gce8Ka6yoXHqTEqman9EqXoa0NxcVss9JcypiL0oxPdGq-LWoricID69aRGzUnITRyGe4_xJc8sG7WyAE_SPX9hPHPRZ-31Dbn_pZat3EmjyDqA2hOIXAirP23cK3YZVaEpqb4MNcXBHki-NzDqd138G861kPDCBRcH6ODSHRrp7w919KHPV5TQK99UfPR3ryVpRwpNV9YclL2YMfr74W2nxlAvaEsNb8tk8uK3VqCroxVWEpSOKVhlNFqbTZx0ETYM96aw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-lowest/20"></div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Генетика • 10-сынып</span>
+<h3 class="text-3xl font-black font-headline text-on-surface leading-tight mb-4">Тұқымқуалаушылық заңдылықтары</h3>
+<p class="text-zinc-600 font-body mb-6 leading-relaxed">Мендель заңдарынан бастап заманауи гендік инженерияға дейінгі негізгі принциптерді меңгеріңіз.</p>
+</div>
+<div class="space-y-4">
+<div class="flex gap-2">
+<button class="flex-1 py-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold tracking-wide hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="play_circle">play_circle</span>
+                                Сабақты бастау
+                            </button>
+<button class="px-4 py-4 bg-surface-container text-primary rounded-xl font-bold hover:bg-emerald-50 transition-all flex items-center justify-center border border-primary/10" title="Оқулықты оқу">
+<span class="material-symbols-outlined" data-icon="book">book</span>
+</button>
+</div>
+<div class="flex justify-between items-center text-xs font-semibold text-zinc-500">
+<span>Прогресс: 75%</span>
+<div class="flex-1 mx-3 h-1.5 bg-zinc-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Secondary Card 1 -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-zinc-50">
+<div class="h-48 overflow-hidden">
+<img alt="Microscope" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvQQBkW03KrRfpEu84x5Pey_JpKCWDA8Bs1TDac_KNsy2yVJ-23GPuwA-aD0bUzo6w-kOrfRbTq0NR7XGN0-lud4-G2O2J1GLY8z2jXCQ3mrkWDGd_71JIbaMsAIvkTRnFvNlxBMrCqdAVu6d48aGy-zbgFe_UhLYm4EouDV0-gOPTBNimafX4_6-T2wB44YzVGZxq5qv-bDC-QY6Zd0-s4_qaE2AQVG8p991xXfdlMnsPpCbRoBkvphbE2H4beUtnqkcHGAvXGjE"/>
+</div>
+<div class="p-6">
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Молекулалық биология</span>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-3">Жасушаның биохимиясы</h3>
+<p class="text-sm text-zinc-500 font-body mb-6">Нәруыздар, көмірсулар мен липидтердің тірі ағзадағы қызметі мен құрылымы.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 bg-white text-primary border border-primary/20 rounded-xl font-bold text-sm hover:bg-primary/5 transition-all">Жалғастыру</button>
+<button class="px-4 py-3 bg-surface-container text-primary rounded-xl font-bold hover:bg-emerald-50 transition-all border border-primary/10">
+<span class="material-symbols-outlined text-xl" data-icon="menu_book">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- PDF Viewer / Modal Mockup Section -->
+<section class="mt-16 bg-white rounded-[2rem] border border-zinc-100 shadow-2xl overflow-hidden">
+<div class="bg-zinc-50 border-b border-zinc-100 px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div>
+<h4 class="font-bold font-headline text-on-surface">Биология: 10-сынып оқулығы</h4>
+<p class="text-[10px] text-zinc-400 font-bold tracking-widest uppercase">342 бет • 45.2 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-zinc-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">zoom_out</span></button>
+<span class="text-sm font-bold text-zinc-600 px-2">124 / 342</span>
+<button class="p-2 text-zinc-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">zoom_in</span></button>
+<div class="h-6 w-px bg-zinc-200 mx-2"></div>
+<button class="p-2 text-zinc-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">fullscreen</span></button>
+</div>
+</div>
+<div class="flex h-[600px]">
+<!-- Table of Contents Sidebar -->
+<aside class="w-80 border-r border-zinc-100 bg-white overflow-y-auto p-6 hidden lg:block">
+<h5 class="text-xs font-black uppercase tracking-widest text-zinc-400 mb-6">Мазмұны</h5>
+<nav class="space-y-1">
+<div class="group">
+<button class="w-full text-left px-4 py-3 rounded-xl hover:bg-zinc-50 transition-all flex items-center justify-between">
+<span class="text-sm font-semibold text-zinc-700">I-тарау: Молекулалық биология</span>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary text-sm">chevron_right</span>
+</button>
+</div>
+<div class="bg-emerald-50 rounded-xl">
+<button class="w-full text-left px-4 py-3 text-primary flex items-center justify-between">
+<span class="text-sm font-bold">II-тарау: Генетика негіздері</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="px-4 pb-3 space-y-2">
+<a class="block pl-4 py-2 text-xs font-medium text-primary/80 border-l-2 border-primary/20 hover:border-primary transition-all" href="#">2.1. Мендель заңдары</a>
+<a class="block pl-4 py-2 text-xs font-medium text-zinc-500 border-l-2 border-transparent hover:text-primary transition-all" href="#">2.2. Күрделі тұқымқуалау</a>
+<a class="block pl-4 py-2 text-xs font-medium text-zinc-500 border-l-2 border-transparent hover:text-primary transition-all" href="#">2.3. Популяциялық генетика</a>
+</div>
+</div>
+<div class="group">
+<button class="w-full text-left px-4 py-3 rounded-xl hover:bg-zinc-50 transition-all flex items-center justify-between">
+<span class="text-sm font-semibold text-zinc-700">III-тарау: Эволюциялық ілім</span>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-primary text-sm">chevron_right</span>
+</button>
+</div>
+</nav>
+</aside>
+<!-- PDF Page View -->
+<div class="flex-1 bg-zinc-100/50 p-8 flex justify-center overflow-y-auto">
+<div class="bg-white w-full max-w-2xl shadow-xl p-12 min-h-screen relative">
+<div class="flex justify-between items-start mb-12">
+<span class="text-[10px] font-bold text-zinc-300 tracking-tighter">THE BIOLOGICAL LENS • UNIT II</span>
+<span class="text-[10px] font-bold text-zinc-300">PAGE 124</span>
+</div>
+<h1 class="text-4xl font-black font-headline text-on-surface mb-8">2.1. Мендельдің бірінші заңы</h1>
+<div class="space-y-6 text-zinc-600 leading-relaxed font-body">
+<p>Грегор Мендель 1865 жылы бұршақ өсімдігімен жүргізген тәжірибелері арқылы тұқымқуалаушылықтың негізгі заңдылықтарын ашты. Ол белгілердің ұрпақтан ұрпаққа берілуін математикалық тұрғыдан сипаттады...</p>
+<div class="bg-emerald-50/50 border-l-4 border-emerald-500 p-6 rounded-r-2xl my-8">
+<h6 class="font-bold text-emerald-900 mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="science">science</span>
+                                Зерттеу тапсырмасы #2.1
+                            </h6>
+<p class="text-sm text-emerald-800 mb-4">Бұршақ тұқымының түсі бойынша (сары және жасыл) моногибридті будандастыру схемасын сызып, F2 ұрпағындағы ажырау қатынасын анықтаңыз.</p>
+<button class="text-xs font-bold text-emerald-700 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-900">Тапсырмаға көшу</button>
+</div>
+<img alt="Genetics diagram" class="w-full h-64 object-cover rounded-2xl opacity-80 grayscale hover:grayscale-0 transition-all cursor-zoom-in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-K667Gce8Ka6yoXHqTEqman9EqXoa0NxcVss9JcypiL0oxPdGq-LWoricID69aRGzUnITRyGe4_xJc8sG7WyAE_SPX9hPHPRZ-31Dbn_pZat3EmjyDqA2hOIXAirP23cK3YZVaEpqb4MNcXBHki-NzDqd138G861kPDCBRcH6ODSHRrp7w919KHPV5TQK99UfPR3ryVpRwpNV9YclL2YMfr74W2nxlAvaEsNb8tk8uK3VqCroxVWEpSOKVhlNFqbTZx0ETYM96aw"/>
+</div>
+</div>
+</div>
+<!-- Contextual Tasks Sidebar -->
+<aside class="w-80 bg-surface-container-low border-l border-zinc-100 p-6 hidden xl:block">
+<div class="mb-8">
+<h5 class="text-xs font-black uppercase tracking-widest text-primary mb-4">Осы тарау бойынша</h5>
+<div class="space-y-4">
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100 group cursor-pointer hover:border-primary transition-all">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">quiz</span>
+</div>
+<span class="text-xs font-bold text-on-surface">Блиц-тест</span>
+</div>
+<p class="text-[10px] text-zinc-500">10 сұрақ • 5 минут</p>
+</div>
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-emerald-500/30 group cursor-pointer hover:bg-emerald-50 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+<span class="text-xs font-bold text-on-surface">Виртуалды лаб</span>
+</div>
+<p class="text-[10px] text-zinc-500">Бұршақтарды будандастыру</p>
+</div>
+</div>
+</div>
+<div>
+<h5 class="text-xs font-black uppercase tracking-widest text-zinc-400 mb-4">Жазбаларыңыз</h5>
+<div class="bg-white/50 border border-dashed border-zinc-300 rounded-2xl p-6 text-center">
+<span class="material-symbols-outlined text-zinc-300 text-3xl mb-2">edit_note</span>
+<p class="text-[10px] text-zinc-400 font-medium leading-relaxed">Бұл бетке жазба қалдыру үшін мәтінді белгілеңіз</p>
+</div>
+</div>
+</aside>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-100 dark:bg-zinc-900 w-full py-12 px-8 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-2xl mx-auto border-t border-zinc-200 dark:border-zinc-800 pt-12">
+<div>
+<h4 class="font-manrope font-bold text-zinc-900 dark:text-white text-xl mb-4">The Biological Lens</h4>
+<p class="text-sm text-zinc-500 leading-relaxed">Болашақ биологтар мен зерттеушілерге арналған білім беру платформасы. Сапалы білім — жарқын болашақ кепілі.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface mb-2">Сілтемелер</h5>
+<a class="text-zinc-500 hover:text-emerald-500 transition-colors underline decoration-emerald-500/30 underline-offset-4" href="#">Біз туралы</a>
+<a class="text-zinc-500 hover:text-emerald-500 transition-colors underline decoration-emerald-500/30 underline-offset-4" href="#">Көмек</a>
+<a class="text-zinc-500 hover:text-emerald-500 transition-colors underline decoration-emerald-500/30 underline-offset-4" href="#">Құпиялылық саясаты</a>
+</div>
+<div>
+<p class="text-zinc-600 dark:text-zinc-400 font-inter text-sm mb-6">© 2024 The Biological Lens. Барлық құқықтар қорғалған.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-200 flex items-center justify-center hover:bg-emerald-100 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-zinc-600" data-icon="language">language</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-zinc-200 flex items-center justify-center hover:bg-emerald-100 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-zinc-600" data-icon="share">share</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-zinc-100 px-6 py-3 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="library_books" data-weight="fill">library_books</span>
+<span class="text-[10px] font-bold">Кітапхана</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="text-[10px] font-bold">Тапсырма</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-[10px] font-bold">Прогресс</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold">Профиль</span>
+</button>
+</nav>
+</body></html>
